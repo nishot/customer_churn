@@ -37,17 +37,11 @@ Deployment
 
 
 
-
-
-
-
-
-
 customer-churn-xgboost/
 │
 ├── data/
-│   ├── raw/
-│   └── processed/
+│   └── raw/
+│       └── WA_Fn-UseC_-Telco-Customer-Churn.csv
 │
 ├── notebooks/
 │   ├── 01_eda.ipynb
@@ -56,15 +50,17 @@ customer-churn-xgboost/
 │   └── 04_model_analysis.ipynb
 │
 ├── src/
+│   ├── __init__.py
 │   ├── preprocessing.py
 │   ├── train.py
 │   ├── evaluate.py
 │   └── predict.py
 │
 ├── models/
-│   └── xgboost_model.json
+│   └── churn_pipeline.pkl
 │
 ├── api/
+│   ├── __init__.py
 │   ├── main.py
 │   ├── schemas.py
 │   └── model_service.py
@@ -72,5 +68,5 @@ customer-churn-xgboost/
 ├── frontend/
 │
 ├── requirements.txt
-│
+├── .gitignore
 └── README.md
